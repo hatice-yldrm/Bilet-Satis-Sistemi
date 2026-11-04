@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rezervasyon - Bilet Satış Sistemi</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="logo görseli.png" alt="logo görseli">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-item">Ana Sayfa</a></li>
+                <li><a href="etkinlikler.html" class="nav-item">Tüm Etkinlikler</a></li>
+                <li><a href="iletisim.html" class="nav-item">İletişim</a></li>
+            </ul>
+            <div class="buttons">
+                <a href="giris_kayit.html"><button class="giris-button">Giriş/Kayıt</button></a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="auth-container">
+        <div class="auth-box">
+            <h2 style="margin-bottom: 20px; color: #0f172a;">Rezervasyon Bilgileri</h2>
+
+            <div class="event-summary"
+                style="background: #f8fafc; padding: 15px; border-radius: 8px; margin-bottom: 20px; border-left: 4px solid #7c3aed;">
+                <h3 id="etkinlik-adi">Yükleniyor...</h3>
+                <p class="etkinlik-turu" id="etkinlik-kategori">Kategori</p>
+                <p id="etkinlik-tarih">Tarih</p>
+                <p id="etkinlik-mekan">Mekan</p>
+            </div>
+
+            <form action="#">
+                <div class="booking-wrapper">
+                    <div class="screen">SAHNE / PERDE</div>
+
+                    <div id="seat-map" class="seat-map"></div>
+
+                    <div class="legend">
+                        <div class="legend-item"><span class="seat-sample available"></span> Boş</div>
+                        <div class="legend-item"><span class="seat-sample selected"></span> Seçili</div>
+                        <div class="legend-item"><span class="seat-sample occupied"></span> Dolu</div>
+                    </div>
+                </div>
+
+                <input type="hidden" id="selected-seat-input" name="koltuk_no" required>
+                <p style="margin-top: 10px;">Seçilen Koltuk: <span id="secilen-koltuk-yazi"
+                        style="font-weight: bold; color: #7c3aed;">Henüz seçilmedi</span></p>
+                <div class="price-display" style="margin-bottom: 20px; font-size: 1.2rem; font-weight: bold;">
+                    Toplam Tutar: <span id="tutar">0</span> TL
+                </div>
+
+                <button type="button" class="buy-btn" onclick="odemeyiTamamla()"
+                    style="width: 100%; padding: 12px; cursor: pointer; background: #7c3aed; color: white; border: none; border-radius: 8px;">
+                    Ödemeyi Tamamla
+                </button>
+            </form>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-info">
+                <img src="logo görseli.png" alt="Logo" class="footer-logo">
+                <p>Eğlenceye giden en kısa yol.</p>
+            </div>
+            <div class="footer-links-group">
+                <h4>Hızlı Menü</h4>
+                <ul>
+                    <li><a href="index.html">Ana Sayfa</a></li>
+                    <li><a href="etkinlikler.html">Tüm Etkinlikler</a></li>
+                    <li><a href="iletisim.html">İletişim</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Bilet Satış ve Rezervasyon Sistemi</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

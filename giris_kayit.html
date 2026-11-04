@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giriş / Kayıt - Bilet Satış Sistemi</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="logo görseli.png" alt="logo görseli">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-item">Ana Sayfa</a></li>
+                <li><a href="etkinlikler.html" class="nav-item">Tüm Etkinlikler</a></li>
+                <li><a href="iletisim.html" class="nav-item">İletişim</a></li>
+            </ul>
+            <div class="buttons">
+                <a href="giris_kayit.html"><button class="giris-button">Giriş/Kayıt</button></a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="auth-container">
+        <div class="auth-box">
+            <section id="login">
+                <h2 style="margin-bottom: 20px;">Giriş Yap</h2>
+                <input type="email" placeholder="E-posta" id="login-email">
+                <input type="password" placeholder="Şifre" id="login-password">
+                <button class="buy-btn" onclick="girisYap()">Giriş Yap</button>
+            </section>
+
+            <hr style="margin: 30px 0; border: 0; border-top: 1px solid #eee;">
+
+            <section id="register">
+                <h2 style="margin-bottom: 20px;">Kayıt Ol</h2>
+                <input type="text" placeholder="Ad Soyad" id="reg-name">
+                <input type="email" placeholder="E-posta" id="reg-email">
+                <input type="password" placeholder="Şifre" id="reg-password">
+                <button class="buy-btn" style="background: #7c3aed;" onclick="kayitOl()">Kayıt Ol</button>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-info">
+                <img src="logo görseli.png" alt="Logo" class="footer-logo">
+                <p>Eğlenceye giden en kısa yol.</p>
+            </div>
+            <div class="footer-links-group">
+                <h4>Hızlı Menü</h4>
+                <ul>
+                    <li><a href="index.html">Ana Sayfa</a></li>
+                    <li><a href="etkinlikler.html">Tüm Etkinlikler</a></li>
+                    <li><a href="iletisim.html">İletişim</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Bilet Satış ve Rezervasyon Sistemi</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

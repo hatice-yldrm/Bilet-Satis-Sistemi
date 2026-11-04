@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bilet Satış Sisitemi</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="ticket.png" type="image/x-icon" style="color: darkviolet;">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="logo görseli.png" alt="logo görseli">
+            </div>
+
+            <li><a href="index.html" class="nav-item">Ana Sayfa</a></li>
+            <li><a href="etkinlikler.html" class="nav-item">Tüm Etkinlikler</a></li>
+            <li><a href="iletisim.html" class="nav-item">İletişim</a></li>
+
+
+            <div class="buttons">
+                <a href="giris_kayit.html"><button class="giris-button">Giriş/Kayıt</button></a>
+            </div>
+
+        </nav>
+        <div class="hero">
+            <h1>Aradığınız Eğlence Sadece Bir Tık Uzağınızda </h1>
+            <h2>Sinema ,Tiyatro,Konser ve birçok fazlası.</h2>
+            <div class="hero-search-box">
+                <label for="sehir">Şehir Seç:</label>
+                <input list="sehirler" id="sehir" placeholder="Şehir yazmaya başla...">
+
+                <datalist id="sehirler">
+                    <option value="Adana">
+                    <option value="Adıyaman">
+                    <option value="Afyonkarahisar">
+                    <option value="Ağrı">
+                    <option value="Aksaray">
+                    <option value="Amasya">
+                    <option value="Ankara">
+                    <option value="Antalya">
+                    <option value="Ardahan">
+                    <option value="Artvin">
+                    <option value="Aydın">
+                    <option value="Balıkesir">
+                    <option value="Bartın">
+                    <option value="Batman">
+                    <option value="Bayburt">
+                    <option value="Bilecik">
+                    <option value="Bingöl">
+                    <option value="Bitlis">
+                    <option value="Bolu">
+                    <option value="Burdur">
+                    <option value="Bursa">
+                    <option value="Çanakkale">
+                    <option value="Çankırı">
+                    <option value="Çorum">
+                    <option value="Denizli">
+                    <option value="Diyarbakır">
+                    <option value="Düzce">
+                    <option value="Edirne">
+                    <option value="Elazığ">
+                    <option value="Erzincan">
+                    <option value="Erzurum">
+                    <option value="Eskişehir">
+                    <option value="Gaziantep">
+                    <option value="Giresun">
+                    <option value="Gümüşhane">
+                    <option value="Hakkâri">
+                    <option value="Hatay">
+                    <option value="Iğdır">
+                    <option value="Isparta">
+                    <option value="İstanbul">
+                    <option value="İzmir">
+                    <option value="Kahramanmaraş">
+                    <option value="Karabük">
+                    <option value="Karaman">
+                    <option value="Kars">
+                    <option value="Kastamonu">
+                    <option value="Kayseri">
+                    <option value="Kilis">
+                    <option value="Kırıkkale">
+                    <option value="Kırklareli">
+                    <option value="Kırşehir">
+                    <option value="Kocaeli">
+                    <option value="Konya">
+                    <option value="Kütahya">
+                    <option value="Malatya">
+                    <option value="Manisa">
+                    <option value="Mardin">
+                    <option value="Mersin">
+                    <option value="Muğla">
+                    <option value="Muş">
+                    <option value="Nevşehir">
+                    <option value="Niğde">
+                    <option value="Ordu">
+                    <option value="Osmaniye">
+                    <option value="Rize">
+                    <option value="Sakarya">
+                    <option value="Samsun">
+                    <option value="Siirt">
+                    <option value="Sinop">
+                    <option value="Sivas">
+                    <option value="Şanlıurfa">
+                    <option value="Şırnak">
+                    <option value="Tekirdağ">
+                    <option value="Tokat">
+                    <option value="Trabzon">
+                    <option value="Tunceli">
+                    <option value="Uşak">
+                    <option value="Van">
+                    <option value="Yalova">
+                    <option value="Yozgat">
+                    <option value="Zonguldak">
+                </datalist>
+                <select class="filter" required>
+                    <option value="" disabled selected hidden>Etkinliği Seçiniz</option>
+                    <option>Konser</option>
+                    <option>Tiyatro</option>
+                    <option>Sinema</option>
+                    <option>Çocuk Etkinliği</option>
+                    <option>Sanat Gösterisi</option>
+                    <option>Belgesel</option>
+
+
+
+
+                </select>
+                <button class="search-btn" onclick="anaSayfadanEtkinliklereGit()">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+
+            </div>
+        </div>
+        </section>
+
+        </div>
+    </header>
+    <main class="events-section">
+        <div class="container">
+            <h2 class="section-title">Popüler Etkinlikler</h2>
+
+            <div class="events-grid">
+                <article class="event-card">
+                    <div class="event-img"><img src="https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?w=500"
+                            alt="Konser"></div>
+                    <div class="event-details">
+                        <span class="category-badge">Konser</span>
+                        <h3>Rock Gecesi</h3>
+                        <p><i class="fa-solid fa-calendar-days"></i> 20 Haz 2026</p>
+                        <p><i class="fa-solid fa-location-dot"></i> İstanbul Harbiye</p>
+                        <span class="price">450 TL'den başlayan fiyatlarla</span>
+                        <a href="bilet_al.html" style="text-decoration: none;">
+                            <button class="buy-btn">Detayları Gör</button>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="event-card">
+                    <div class="event-img"><img src="https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?w=500"
+                            alt="Tiyatro"></div>
+                    <div class="event-details">
+                        <span class="category-badge">Tiyatro</span>
+                        <h3>Hamlet</h3>
+                        <p><i class="fa-solid fa-calendar-days"></i> 15 Tem 2026</p>
+                        <p><i class="fa-solid fa-location-dot"></i> Ankara Devlet Tiyatrosu</p>
+                        <span class="price">200 TL'den başlayan fiyatlarla</span>
+                        <a href="bilet_al.html" style="text-decoration: none;">
+                            <button class="buy-btn">Detayları Gör</button>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="event-card">
+                    <div class="event-img"><img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=500"
+                            alt="Sinema"></div>
+                    <div class="event-details">
+                        <span class="category-badge">Sinema</span>
+                        <h3>Yıldızlararası</h3>
+                        <p><i class="fa-solid fa-calendar-days"></i> 10 Haz 2026</p>
+                        <p><i class="fa-solid fa-location-dot"></i> Malatya Park Cinemaximum</p>
+                        <span class="price">120 TL'den başlayan fiyatlarla</span>
+                        <a href="bilet_al.html" style="text-decoration: none;">
+                            <button class="buy-btn">Detayları Gör</button>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="event-card">
+                    <div class="event-img"><img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=500"
+                            alt="Belgesel"></div>
+                    <div class="event-details">
+                        <span class="category-badge">Belgesel</span>
+                        <h3>Mavi Gezegen</h3>
+                        <p><i class="fa-solid fa-calendar-days"></i> 05 Ağu 2026</p>
+                        <p><i class="fa-solid fa-location-dot"></i> İzmir Sanat Merkezi</p>
+                        <span class="price">80 TL'den başlayan fiyatlarla</span>
+                        <a href="bilet_al.html" style="text-decoration: none;">
+                            <button class="buy-btn">Detayları Gör</button>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="event-card">
+                    <div class="event-img"><img src="https://images.unsplash.com/photo-1472162072942-cd5147eb3902?"
+                            alt="Çocuk"></div>
+                    <div class="event-details">
+                        <span class="category-badge">Çocuk Etkinliği</span>
+                        <h3>Sihirli Orman</h3>
+                        <p><i class="fa-solid fa-calendar-days"></i> 12 Haz 2026</p>
+                        <p><i class="fa-solid fa-location-dot"></i> İstanbul Çocuk Kültür Evi</p>
+                        <span class="price">150 TL'den başlayan fiyatlarla</span>
+                        <a href="bilet_al.html" style="text-decoration: none;">
+                            <button class="buy-btn">Detayları Gör</button>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="event-card">
+                    <div class="event-img"><img src="https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?"
+                            alt="Sanat"></div>
+                    <div class="event-details">
+                        <span class="category-badge">Sanat Gösterisi</span>
+                        <h3>Modern Dans</h3>
+                        <p><i class="fa-solid fa-calendar-days"></i> 22 Tem 2026</p>
+                        <p><i class="fa-solid fa-location-dot"></i> Antalya Opera ve Bale</p>
+                        <span class="price">300 TL'den başlayan fiyatlarla</span>
+                        <a href="bilet_al.html" style="text-decoration: none;">
+                            <button class="buy-btn">Detayları Gör</button>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-info">
+                <img src="logo görseli.png" alt="Logo" class="footer-logo">
+                <p>Eğlenceye giden en kısa yol. En güncel etkinlikler ve kolay rezervasyon imkanı.</p>
+            </div>
+
+            <div class="footer-links-group">
+                <h4>Hızlı Menü</h4>
+                <ul>
+                    <li><a href="index.html">Ana Sayfa</a></li>
+                    <li><a href="etkinlikler.html">Tüm Etkinlikler</a></li>
+                    <li><a href="iletisim.html">İletişim</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-social">
+                <h5>Bizi Takip Edin</h5>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Bilet Satış ve Rezervasyon Sistemi - Hatice Yıldırım [cite: 4]</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+
+    <script>
+        function anaSayfadanEtkinliklereGit() {
+            const sehir = document.getElementById('sehir').value.trim();
+            const kategori = document.querySelector('.filter').value;
+
+            // Eğer hiçbir şey seçilmediyse uyarı ver (isteğe bağlı)
+            if (!sehir && (!kategori || kategori === "Etkinliği Seçiniz")) {
+                alert("Lütfen şehir yazın veya kategori seçin!");
+                return;
+            }
+
+
+            window.location.href = `etkinlikler.html?sehir=${encodeURIComponent(sehir)}&kategori=${encodeURIComponent(kategori)}`;
+        }
+    </script>
+
+</body>
+
+</html>

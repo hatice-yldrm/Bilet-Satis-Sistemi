@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tüm Etkinlikler - Bilet Satış Sistemi</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo"><img src="logo görseli.png" alt="logo"></div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-item">Ana Sayfa</a></li>
+                <li><a href="etkinlikler.html" class="nav-item">Tüm Etkinlikler</a></li>
+                <li><a href="iletisim.html" class="nav-item">İletişim</a></li>
+            </ul>
+            <div class="buttons">
+                <a href="giris_kayit.html"><button class="giris-button">Giriş/Kayıt</button></a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="events-page">
+        <h2 class="section-title">Etkinlik Ajandası</h2>
+
+        <div class="category-filters">
+            <button class="filter-btn active">Tümü</button>
+            <button class="filter-btn">Konser</button>
+            <button class="filter-btn">Tiyatro</button>
+            <button class="filter-btn">Sinema</button>
+            <button class="filter-btn">Çocuk Etkinliği</button>
+            <button class="filter-btn">Sanat Gösterisi</button>
+            <button class="filter-btn">Belgesel</button>
+        </div>
+
+        <div class="date-filter-group">
+            <label for="tarih-sorgu">Tarih Seç:</label>
+            <input type="date" id="tarih-sorgu" class="filter-input">
+            <button id="tarih-filtrele-btn" class="giris-button-small">Listele</button>
+        </div>
+
+        <div id="etkinlik-listesi" class="event-grid">
+            <p style="text-align: center; grid-column: 1/-1;">Etkinlikler yükleniyor...</p>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-info">
+                <img src="logo görseli.png" alt="Logo" class="footer-logo">
+                <p>Eğlenceye giden en kısa yol.</p>
+            </div>
+            <div class="footer-links-group">
+                <h4>Hızlı Menü</h4>
+                <ul>
+                    <li><a href="index.html">Ana Sayfa</a></li>
+                    <li><a href="etkinlikler.html">Tüm Etkinlikler</a></li>
+                    <li><a href="iletisim.html">İletişim</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Bilet Satış ve Rezervasyon Sistemi</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
